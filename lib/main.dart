@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/home_fern.dart';
+import 'package:flutter_application_1/ui/home_fern.dart';
 import 'package:gap/gap.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'WELCOME!!'),
-       debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -68,16 +68,16 @@ class _MyHomePageState extends State<MyHomePage> {
             child: OutlinedButton(
               style: outlineButtonStyle,
               onPressed: () {
-                  Navigator.of(context).push(
-    MaterialPageRoute(
-      builder: (context) => const HomeFern(),
-    ),
-  );
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const HomeFern(),
+                  ),
+                );
               },
               child: const Text('PLAYER 1'),
             ),
           ),
-           const Gap(16),
+          const Gap(16),
           Center(
             child: OutlinedButton(
               style: outlineButtonStyle,
