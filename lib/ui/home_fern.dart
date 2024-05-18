@@ -23,69 +23,7 @@ class _HomeFernState extends State<HomeFern> {
       body: Stack(
         alignment: Alignment.bottomCenter,
         children: [
-          PageView(
-            onPageChanged: (int page) {
-              setState(() {
-                currentIndex = page;
-              });
-            },
-            controller: _pageController,
-            children: [
-              createPage(
-                image: 'assets/images/plant-one.png',
-                title: Constants.titleOne,
-                description: Constants.descriptionOne,
-              ),
-              createPage(
-                image: 'assets/images/plant-two.png',
-                title: Constants.titleTwo,
-                description: Constants.descriptionTwo,
-              ),
-              createPage(
-                image: 'assets/images/plant-three.png',
-                title: Constants.titleThree,
-                description: Constants.descriptionThree,
-              ),
-            ],
-          ),
-          Positioned(
-            bottom: 80,
-            left: 30,
-            child: Row(
-              children: _buildIndicator(),
-            ),
-          ),
-          Positioned(
-            bottom: 60,
-            right: 30,
-            child: Container(
-              child: IconButton(
-                  onPressed: () {
-                    setState(() {
-                      if (currentIndex < 2) {
-                        currentIndex++;
-                        if (currentIndex < 3) {
-                          _pageController.nextPage(
-                              duration: const Duration(milliseconds: 300),
-                              curve: Curves.easeIn);
-                        }
-                      } else {
-                      
-                      }
-                    });
-                  },
-                  icon: const Icon(
-                    Icons.arrow_forward_ios,
-                    size: 24,
-                    color: Colors.white,
-                  )),
-              padding: const EdgeInsets.all(4),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Constants.primaryColor,
-              ),
-            ),
-          ),
+
         ],
       ),
     );
